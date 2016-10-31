@@ -1,17 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.ienning.layoutmanagerview.MainActivity">
+    >
 
-    <TextView
+    <EditText
+        android:maxLines="1"
+        android:id="@+id/passwordm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:width="100pt"
+        android:layout_below="@+id/userm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/passwordm" />
+
+    <EditText
+        android:layout_alignParentTop="true"
+        android:maxLength="1"
+        android:id="@+id/userm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100pt"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBaseline="@+id/user"
+        android:layout_alignBottom="@+id/user"
+        android:layout_alignStart="@+id/passwordm" />
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户名"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@+id/userm" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密码："
+        android:layout_alignBaseline="@+id/passwordm"
+        android:layout_alignBottom="@+id/passwordm"
+        android:layout_alignStart="@+id/user" />
 </RelativeLayout>
