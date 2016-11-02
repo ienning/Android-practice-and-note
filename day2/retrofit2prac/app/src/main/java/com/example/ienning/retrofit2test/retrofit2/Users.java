@@ -29,7 +29,9 @@ public interface Users {
         public static final Users create() {
             HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-            // 拦截器的可以当网络出问题是，进行连接重试，比如一个token如果过期了，可以使用使用拦截器进行重新登录，获取新的有效Token
+            /* 拦截器的可以当网络出问题是，进行连接重试，比如一个token如果过期了，可以使用使用拦截器进行重新登录，获取新的有效Token
+            okhttp和retrofit组合的好处是，retrofit用于请求，连接。而okHttp是在请求连接过程，比如重连，下载这些功能就比较好利用okHttp
+             */
             OkHttpClient client = new OkHttpClient.Builder()
                     .addInterceptor(interceptor)
                     .addNetworkInterceptor(new Interceptor() {

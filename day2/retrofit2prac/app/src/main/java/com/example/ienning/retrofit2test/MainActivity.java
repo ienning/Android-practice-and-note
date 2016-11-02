@@ -1,7 +1,7 @@
 package com.example.ienning.retrofit2test;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.example.ienning.retrofit2test.retrofit2.HeWeatherBean;
@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+    public void retrofit2() {
         NetWorkRequest netWorkRequest = NetWorkRequest.getNetworkRequest();
         Action1<HeWeatherBean> onNext = new Action1<HeWeatherBean>() {
             @Override
